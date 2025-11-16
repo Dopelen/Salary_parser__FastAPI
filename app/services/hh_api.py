@@ -18,7 +18,6 @@ async def fetch_vacancies(query: str, per_page: int) -> List[Vacancy]:
 
     result = []
     for item in data.get("items", []):
-        print(item)
         salary = item.get("salary")
         vac = Vacancy(
             id=item.get("id"),
